@@ -14,8 +14,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // link static files to client
-app.use('/bower_components', express.static(path.join(__dirname, 'app/bower_components')))
-app.use('/client', express.static('app'))
+app.use('/', express.static('app'))
 
 app.use(logger('dev'))
 app.use(express.json())

@@ -1,14 +1,14 @@
-angular.
-  module('listeElevesApp').
-  component('listeEleves', {
+ angular.
+  module('studentList').
+  component('studentList', {
     template: '<ul>' +
-    			'<li ng-repeat="eleve in eleves">' +
-    				'<span>{{eleve.nom}}</span>' +
-    				'<p>{{eleve.before_ifa}}<p>' +
+    			'<li ng-repeat="student in $ctrl.students">' +
+    				'<span>{{student.nom}}</span>' +
+    				'<p>{{student.before_ifa}}<p>' +
     			'</li>' +
     		   '</ul>',
-    controller: function listeElevesController() {
-      this.eleves = [
+    controller: function studentListController() {
+      this.students = [
       	{
 		   "nom": "Chehaibou",
 		   "prenom": "Sofiann",

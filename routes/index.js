@@ -6,7 +6,7 @@ var path = require('path')
 
 /* GET home page. */
 router.get('/', function(req, res, next){
-	res.send('Application de FDP')
+	res.sendFile(path.join(__dirname, '../', 'app', 'index.html'))
 })
 
 .get('/api/eleves', function(req, res, next){
