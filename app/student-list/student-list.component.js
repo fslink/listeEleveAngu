@@ -1,12 +1,7 @@
  angular.
   module('studentList').
   component('studentList', {
-    template: '<ul>' +
-    			'<li ng-repeat="student in $ctrl.students">' +
-    				'<span>{{student.nom}}</span>' +
-    				'<p>{{student.before_ifa}}<p>' +
-    			'</li>' +
-    		   '</ul>',
+    templateUrl: 'student-list/student-list.template.html',
     controller: function studentListController() {
       this.students = [
       	{
