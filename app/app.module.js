@@ -1,3 +1,5 @@
 angular.module('studentListApp', [
-	'studentList'
+	'ngRoute',
+	'studentList',
+	'studentDetail'
 ]);

@@ -4,14 +4,18 @@
     <meta charset="utf-8">
     <title>Liste des Eleves</title>
     <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
     <script src="student-list/student-list.module.js"></script>
     <script src="student-list/student-list.component.js"></script>
+    <script src="student-detail/student-detail.module.js"></script>
+    <script src="student-detail/student-detail.component.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap-grid.css">
   </head>
   <body>
-
-      <student-list></student-list>
-
+    <div class="view-container">
+      <div ng-view class="view-frame"></div>
+    </div>
   </body>
 </html>

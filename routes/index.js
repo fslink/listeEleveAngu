@@ -16,7 +16,7 @@ router.get('/', function(req, res, next){
 	})
 })
 
-.get('/api/eleve/:id', function(req, res, next){
+.get('/api/eleves/:id', function(req, res, next){
 	Liste.findById(req.param('id'), function (err, docs) {
 		if (err) {
 			res.send('id non trouvé')
@@ -32,7 +32,7 @@ router.get('/', function(req, res, next){
 	res.sendFile(path.join(__dirname + '/../tpJS/liste.html'))
 })
 
-.get('/eleve/:id', function(req, res, next){
+.get('/eleves/:id', function(req, res, next){
 	res.type('html')
 	res.set(200)
 	res.sendFile(path.join(__dirname + '/../tpJS/profil.html'))
