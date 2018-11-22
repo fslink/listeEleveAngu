@@ -44,5 +44,5 @@ app.use(function(err, req, res, next) {
 module.exports = app
 
 app.listen(9999, function(){
-	console.log('server ok')
+	console.log('server ok on 9999 port')
 })

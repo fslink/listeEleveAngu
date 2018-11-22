@@ -10,6 +10,7 @@ router.get('/', function(req, res, next){
 })
 
 .get('/api/eleves', function(req, res, next){
+	mongoose.set('debug', true);
 	Liste.find({}, function (err, docs) {
 		if (err) return handleError(err)
 		res.json(docs)
