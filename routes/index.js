@@ -4,12 +4,7 @@ var mongoose = require('../models/connection')
 var Liste = require('../models/Liste')
 var path = require('path')
 
-/* GET home page. */
-router.get('/', function(req, res, next){
-	res.sendFile(path.join(__dirname, '../', 'app', 'index.html'))
-})
-
-.get('/api/eleves', function(req, res, next){
+router.get('/eleves', function(req, res, next){
 	mongoose.set('debug', true);
 	Liste.find({}, function (err, docs) {
 		if (err) return handleError(err)
@@ -17,7 +12,7 @@ router.get('/', function(req, res, next){
 	})
 })
 
-.get('/api/eleves/:id', function(req, res, next){
+.get('/eleves/:id', function(req, res, next){
 	Liste.findById(req.param('id'), function (err, docs) {
 		if (err) {
 			res.send('id non trouvé')
@@ -25,18 +20,6 @@ router.get('/', function(req, res, next){
 			res.json(docs)
 		}
 	})
-})
-
-.get('/eleves', function(req, res, next){
-	res.type('html')
-	res.set(200)
-	res.sendFile(path.join(__dirname + '/../tpJS/liste.html'))
-})
-
-.get('/eleves/:id', function(req, res, next){
-	res.type('html')
-	res.set(200)
-	res.sendFile(path.join(__dirname + '/../tpJS/profil.html'))
 })
 
 module.exports = router

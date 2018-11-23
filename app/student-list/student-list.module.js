@@ -1,3 +1,4 @@
 angular.module('studentList', [
-	'ngRoute'
+	'ngRoute',
+	'core.eleve'
 ]);

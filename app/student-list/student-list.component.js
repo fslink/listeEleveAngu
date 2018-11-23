@@ -2,14 +2,10 @@
   module('studentList').
   component('studentList', {
     templateUrl: 'student-list/student-list.template.html',
-    controller: ['$http', function studentListController($http) {
+    controller: ['Eleve', function studentListController(Eleve) {
 
-      var self = this;
+      this.students = Eleve.query();
       this.orderProp = "nom";
-
-      $http.get('api/eleves').then(function(response){
-      	self.students = response.data;
-      })
 
     }]
  });

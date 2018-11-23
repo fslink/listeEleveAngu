@@ -4,16 +4,19 @@
       <!--Sidebar content-->
     <p>
       Search: 
-      <input ng-model="$ctrl.query" />
+      <input ng-model="$ctrl.query.nom" />
+      <input ng-model="$ctrl.query.prenom" />
     </p>
     
     <p>
       Sort by :
       <select name="" id="" ng-model="$ctrl.orderProp">
-        <option value="nom">Alphabetical</option>
+        <option value="nom">Alphabetical Name</option>
+        <option value="prenom">Alphabetical FirstName</option>
         <option value="age">Newest</option>
       </select>
-    </p>  
+    </p>
+    <p>{{ $ctrl.orderProp }}</p>
 
     </div>
     <div class="col-md-10">
@@ -26,7 +29,7 @@
             <span><strong>Nom, prénom : </strong></span>
             <span>{{student.nom}}</span> <span>{{student.prenom}}</span>
             <p><span>age : </span>{{student.age}}</p>
-            <a href="#!/students/{{student._id}}">
+            <a href="/#client/students/{{student._id}}">
               <button>Detail >></button>
             </a>
           </div>

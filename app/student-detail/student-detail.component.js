@@ -7,8 +7,8 @@ angular.
       	var self = this;
 
         $http.get('api/eleves/' + $routeParams.studentId).then(function(response){
-      	self.student = response.data;
-      })
+      	 self.student = response.data;
+        })
 
       }
     ]
